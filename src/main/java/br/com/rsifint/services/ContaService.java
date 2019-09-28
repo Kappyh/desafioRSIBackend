@@ -3,6 +3,8 @@ package br.com.rsifint.services;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import br.com.rsifint.dao.ContaDAO;
+import br.com.rsifint.exception.NegocioException;
 import br.com.rsifint.models.Conta;
 import br.com.rsifint.repositories.ContaRepository;
 
@@ -17,9 +19,16 @@ public class ContaService {
 		this.repository = repository;
 	}
 	
-	public Conta createConta() {
-		Conta conta = new Conta();
-		return conta;
+	public String createConta(ContaDAO conta) throws NegocioException {
+		try {
+			repository.save(conta);
+			
+			return "sds-asdd-sadas";
+		}catch (Exception e) {
+			throw new NegocioException("Nao foi possivel criar a conta " + conta.getContaIdentity().getNumero());
+		}
 	}
+	
+	
 
 }

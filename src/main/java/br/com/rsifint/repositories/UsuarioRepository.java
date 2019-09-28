@@ -5,6 +5,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import br.com.rsifint.dao.UsuarioDAO;
 import br.com.rsifint.dao.UsuarioIdentity;
 
-public interface UsuarioRepository extends JpaRepository<UsuarioDAO, UsuarioIdentity> {
-//	UsuarioDAO getByCpf(String cpf);	
+public interface UsuarioRepository extends JpaRepository<UsuarioDAO, UsuarioIdentity> {	
 }
