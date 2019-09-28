@@ -24,7 +24,6 @@ public class AuthController {
 
 	@PostMapping("")
 	public ResponseEntity<?> login(@RequestBody Usuario usuario) {
-		
 		try {
 			return ResponseEntity
 					.status(HttpStatus.OK)
