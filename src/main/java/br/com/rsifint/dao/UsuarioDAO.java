@@ -18,6 +18,9 @@ public class UsuarioDAO {
 	private UsuarioIdentity usuarioIdentity;
 	
 	@Column
+	private String senha;
+	
+	@Column
 	private String email;
 	
 	@Column
@@ -53,6 +56,14 @@ public class UsuarioDAO {
 	@Column
 	private String pais;
 
+	
+	public String getSenha() {
+		return senha;
+	}
+
+	public void setSenha(String senha) {
+		this.senha = senha;
+	}
 
 	public UsuarioIdentity getUsuarioIdentity() {
 		return usuarioIdentity;

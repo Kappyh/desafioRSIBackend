@@ -3,7 +3,9 @@ package br.com.rsifint.models;
 
 public class Usuario {
 	
-	private Long cpf;
+	private String cpf;
+	
+	private String senha;
 	
 	private String email;
 
@@ -29,12 +31,22 @@ public class Usuario {
 	private String estado;
 
 	private String pais;
+	
+	
 
-	public Long getCpf() {
+	public String getSenha() {
+		return senha;
+	}
+
+	public void setSenha(String senha) {
+		this.senha = senha;
+	}
+
+	public String getCpf() {
 		return cpf;
 	}
 
-	public void setCpf(Long cpf) {
+	public void setCpf(String cpf) {
 		this.cpf = cpf;
 	}
 

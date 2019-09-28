@@ -17,7 +17,7 @@ public class UsuarioIdentity implements Serializable{
 	private Long id;
 	
 	@Column
-	private Long cpf;
+	private String cpf;
 
 	public Long getId() {
 		return id;
@@ -27,11 +27,11 @@ public class UsuarioIdentity implements Serializable{
 		this.id = id;
 	}
 
-	public Long getCpf() {
+	public String getCpf() {
 		return cpf;
 	}
 
-	public void setCpf(Long cpf) {
+	public void setCpf(String cpf) {
 		this.cpf = cpf;
 	}
 	
