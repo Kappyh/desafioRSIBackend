@@ -9,11 +9,11 @@ import javax.persistence.GenerationType;
 import javax.persistence.SequenceGenerator;
 
 @Embeddable
+@SequenceGenerator(name = "usuarioIdGenerator", sequenceName="USUARIO_ID_GENERATOR", allocationSize=1)
 public class UsuarioIdentity implements Serializable{
 	
 	@Column
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "usuarioIdGenerator")
-    @SequenceGenerator(name = "usuarioIdGenerator", sequenceName="USUARIO_ID_GENERATOR", allocationSize=1)
 	private Long id;
 	
 	@Column

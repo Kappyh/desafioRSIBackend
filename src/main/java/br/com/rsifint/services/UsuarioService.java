@@ -1,5 +1,6 @@
 package br.com.rsifint.services;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import br.com.rsifint.dao.UsuarioDAO;
@@ -11,6 +12,7 @@ import br.com.rsifint.repositories.UsuarioRepository;
 @Service
 public class UsuarioService {
 	
+	@Autowired
 	private UsuarioRepository repository;
 
 	public String cadastrarUsuario(Usuario usuario) throws NegocioException{
@@ -51,6 +53,8 @@ public class UsuarioService {
 		usuarioEntity.setSobrenome(usuario.getSobrenome());
 		usuarioEntity.setUsuarioIdentity(new UsuarioIdentity());
 		usuarioEntity.getUsuarioIdentity().setCpf(usuario.getCpf());
+		
+		
 		
 		try {
 			repository.save(usuarioEntity);

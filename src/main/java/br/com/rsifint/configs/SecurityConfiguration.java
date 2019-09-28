@@ -15,6 +15,8 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
         
         httpSecurity.csrf().disable();
         
+        httpSecurity.headers().frameOptions().disable();
+        
 }
 
 }
