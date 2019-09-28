@@ -1,17 +1,20 @@
 package br.com.rsifint.services;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import br.com.rsifint.dao.ContaDAO;
 import br.com.rsifint.models.Conta;
+import br.com.rsifint.repositories.ContaRepository;
 
 @Service
 public class ContaService {
 
-	private ContaDAO contaDao;
+	
+	private ContaRepository repository;
 
-	public ContaService() {
-		this.contaDao = new ContaDAO();
+	@Autowired
+	public ContaService(ContaRepository repository) {
+		this.repository = repository;
 	}
 	
 	public Conta createConta() {
