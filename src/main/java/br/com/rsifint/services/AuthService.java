@@ -20,6 +20,7 @@ public class AuthService {
 			throw new NegocioException("Usuario ou senhas invalidos");
 		}
 		
+		
 		return "token x";
 	}
 }
