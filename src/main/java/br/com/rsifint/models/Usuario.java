@@ -16,6 +16,7 @@ public class Usuario {
 	private String dataNascimento;
 
 	private String rua;
+	
 
 	private Integer numero;
 

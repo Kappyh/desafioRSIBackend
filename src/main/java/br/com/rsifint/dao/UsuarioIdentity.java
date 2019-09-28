@@ -1,5 +1,7 @@
 package br.com.rsifint.dao;
 
+import java.io.Serializable;
+
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
 import javax.persistence.GeneratedValue;
@@ -7,7 +9,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.SequenceGenerator;
 
 @Embeddable
-public class UsuarioIdentity {
+public class UsuarioIdentity implements Serializable{
 	
 	@Column
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "usuarioIdGenerator")

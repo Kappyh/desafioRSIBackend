@@ -4,6 +4,7 @@ import org.springframework.stereotype.Service;
 
 import br.com.rsifint.dao.UsuarioDAO;
 import br.com.rsifint.exception.NegocioException;
+import br.com.rsifint.models.Usuario;
 
 @Service
 public class AuthService {
@@ -15,12 +16,7 @@ public class AuthService {
 	}
 	
 	
-	public String autenticarUsuario(String cpf, String senha) throws NegocioException {
-		if(cpf == null || cpf.trim().equals("") || senha == null || senha.trim().equals("")) {
-			throw new NegocioException("Usuario ou senhas invalidos");
-		}
-		
-		
+	public String autenticarUsuario(Usuario usuario) throws NegocioException {
 		return "token x";
 	}
 }
