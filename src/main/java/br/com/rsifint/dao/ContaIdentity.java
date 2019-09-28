@@ -12,8 +12,8 @@ import javax.persistence.SequenceGenerator;
 public class ContaIdentity implements Serializable{
  
 	@Column
-	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "usuarioIdGenerator")
-    @SequenceGenerator(name = "usuarioIdGenerator", sequenceName="USUARIO_ID_GENERATOR", allocationSize=1)
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "contaIdGenerator")
+    @SequenceGenerator(name = "contaIdGenerator", sequenceName="CONTA_ID_GENERATOR", allocationSize=1)
 	private Long id;
 	
 	private Integer numero;
