@@ -10,7 +10,7 @@ import br.com.rsifint.exception.NegocioException;
 @RequestMapping("/auth")
 public class AuthController {
 	
-	@GetMapping
+	@GetMapping("/")
 	public ResponseEntity teste() throws NegocioException {
 		
 		try {
