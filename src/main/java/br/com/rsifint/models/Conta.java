@@ -1,37 +1,29 @@
 package br.com.rsifint.models;
 
-import java.math.BigDecimal;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
+@Entity
 public class Conta {
 	
-	private Integer id;
-	private String cpf;
-	private BigDecimal saldo;
-	private String conta;
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	private Long id;
+	private Integer numero;
 	
-	public Integer getId() {
+	public Long getId() {
 		return id;
 	}
-	public void setId(Integer id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
-	public String getCpf() {
-		return cpf;
+	public Integer getNumero() {
+		return numero;
 	}
-	public void setCpf(String cpf) {
-		this.cpf = cpf;
-	}
-	public BigDecimal getSaldo() {
-		return saldo;
-	}
-	public void setSaldo(BigDecimal saldo) {
-		this.saldo = saldo;
-	}
-	public String getConta() {
-		return conta;
-	}
-	public void setConta(String conta) {
-		this.conta = conta;
+	public void setNumero(Integer numero) {
+		this.numero = numero;
 	}
 	
 	
